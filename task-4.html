@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task-4</title>
+</head>
+<body>
+	<script>
+		const pricePerDroid = 3000;
+		let credits = 23580;
+		let totalPrice;
+		let response = prompt("How many droids to buy?");
+		if (!response){
+			console.log("Скасовано користувачем!");
+		} else {
+			totalPrice = (pricePerDroid * Number(response));
+			let result = totalPrice <= credits && totalPrice > 0 ? `Ви купили ${response} дроїдів, на рахунку залишилося ${credits - totalPrice} кредитів.` : "Недостатньо коштів на рахунку!";
+			console.log(result);
+			alert(result)
+		}
+	</script>
+</body>
+</html>
