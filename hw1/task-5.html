@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task-5</title>
+</head>
+<body>
+	<script>
+		function capitalize(string) {
+  			return string.charAt(0).toUpperCase() + string.slice(1);
+		}
+		let countrySelected = prompt("What country?").toLowerCase();
+		switch (countrySelected) {
+			case "китай":
+				alert(`Доставка в ${capitalize(countrySelected)} буде коштувати 100 кредитів.`);
+				break;
+			case "чилі":
+				alert(`Доставка в ${capitalize(countrySelected)} буде коштувати 250 кредитів.`);
+				break;
+			case "автралія":
+				alert(`Доставка в ${capitalize(countrySelected)} буде коштувати 170 кредитів.`);
+				break;
+			case "індія":
+				alert(`Доставка в ${capitalize(countrySelected)} буде коштувати 80 кредитів.`);
+				break;
+			case "ямайка":
+				alert(`Доставка в ${capitalize(countrySelected)} буде коштувати 120 кредитів.`);
+				break;
+			default:
+				alert(`У вашій країні доставка недоступна.`);
+				break;
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+    <script src="logic.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<title>JS Training</title>
+</head>
+<body>
+    <div class="topnav" onmousewheel="color()">
+        <a class="active" href="">Home</a>
+        <a href="news.html">News</a>
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown ⇩
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+        <a href="#" id="login" onclick="showWeather('login')">Show Weather</a>
+        <a href="login.html" id="login">Log In</a>
+    </div>
+    <div class="topnews">
+        <div>
+            <h3>This is some hot news!</h3>
+            <p>Read our news. I have startes a new job in GlobalLogic IT company. </p>
+        </div>
+        <div>
+            <h3>This is some top news!</h3>
+            <p>Read our news. I have startes a new job in GlobalLogic IT company. Read our news. I have startes a new job in GlobalLogic IT company. </p>
+        </div>
+        <div>
+            <h3>This is some hot news!</h3>
+            <p>Read our news. I have startes a new job in GlobalLogic IT company. Read our news. I have startes a new job in GlobalLogic IT company. vertical-align:top;</p>
+        </div>
+        <div>
+            <h3>This is some top news!</h3>
+            <p>New news!</p>
+        </div>
+        <div>
+            <h3>This is some hot news!</h3>
+            <p>Read our news</p>
+        </div>
+        <div>
+            <h3>This is some top news!</h3>
+            <p>New news!</p>
+        </div>
+    </div>
+    <div>
+        <img class="train" id="train" src="train.gif" onclick="move()">
+    </div>
+    <a id="back2Top" title="Back to top" href="#">&#10148;</a>
+ <script>
+   $(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
+$(document).ready(function() {
+    $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+
+});
+ </script>
+    <footer>
+        <p>St. Polishchuk Blog</p>
+        <!-- <p><a href="javascript:location.reload(true)">Refresh Page</a></p> -->
+        <!-- <p><a href="#">Move up</a></p> -->
+        <p id="subscribe">
+            <input type="text" placeholder="your e-mail" name="e-mail" id="e-mail">
+            <button type="submit" onclick="subscribe()">Subscribe</button>
+        </p>
+    </footer>
+</body>
+</html>
